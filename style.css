@@ -17,3 +17,9 @@ body {
 	font-weight: bold;
 	border: 1px solid black;
 }
+
+#answer {
+	color: blue;
+	font-size: 1.50em;
+	font-weight: bold;
+}

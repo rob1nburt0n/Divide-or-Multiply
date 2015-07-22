@@ -23,7 +23,14 @@
   	if (numberString.length > 0) {
   		var numberInteger = parseInt(numberString);
   		// e.g. "200" --> 200 (string to number conversion);
-  	} else  {
+  	}
+     if (numberString > 10000) {
+   	document.getElementById("answer").innerHTML="<p>" + "Your answer is: " + divideByTen(numberString) + "</p>";
+   }
+    else if (numberString > 0 && numberString < 10000) {
+    document.getElementById("answer").innerHTML="<p>" + "Your answer is: " + multiplyByFive(numberString) + "</p>";
+   }
+     else  {
    	 alert("Please enter a number");
    	}
   }
@@ -34,17 +41,12 @@
   
   button.onclick = buttonClickHandler; // correct
 
+  
+
   //  If there is a value, and its numeric value is greater than 10000, 
   // call a function that passes in the user-entered value as an argument,
   // and the name of the function that divides by 10.
     
-    if (numberString > 10000) {
-   	document.write("<p>" + "Your answer is " + divideByTen(numEntered) + "</p>");
-   }
-    else if (numberString > 0 && numberString < 10000) {
-    document.write("<p>" + "Your answer is " + multiplyByFive(numEntered) + "</p>");
-   }
-
    // If there is a value, and its numeric value is less than 10000, 
   // call a function that passes in the user-entered value as an argument, 
   // and the name of the function that multiplies by 5.
