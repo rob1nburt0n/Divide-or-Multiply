@@ -23,16 +23,17 @@
   	if (numberString.length > 0) {
   		var numberInteger = parseInt(numberString);
   		// e.g. "200" --> 200 (string to number conversion);
-  	}
-     if (numberString > 10000) {
-   	document.getElementById("answer").innerHTML="<p>" + "Your answer is: " + divideByTen(numberString) + "</p>";
-   }
-    else if (numberString < 10000) {
-    document.getElementById("answer").innerHTML="<p>" + "Your answer is: " + multiplyByFive(numberString) + "</p>";
-   }
-     else  {
+  	}	else  {
    	 alert("Please enter a number");
    	}
+  	
+     if (numberString.length > 0 && numberString > 10000) {
+   	document.getElementById("answer").innerHTML="<p>" + "Your answer is: " + divideByTen(numberString) + "</p>";
+   }
+    else if (numberString.length > 0 && numberString < 10000) {
+    document.getElementById("answer").innerHTML="<p>" + "Your answer is: " + multiplyByFive(numberString) + "</p>";
+   }
+     
   }
   // - When the button is clicked, call a JavaScript function that checks 
   // function determineConverter (e) {
