@@ -27,7 +27,7 @@
      if (numberString > 10000) {
    	document.getElementById("answer").innerHTML="<p>" + "Your answer is: " + divideByTen(numberString) + "</p>";
    }
-    else if (numberString > 0 && numberString < 10000) {
+    else if (numberString < 10000) {
     document.getElementById("answer").innerHTML="<p>" + "Your answer is: " + multiplyByFive(numberString) + "</p>";
    }
      else  {
